@@ -14,3 +14,9 @@ USER flet
 WORKDIR /app
 
 RUN pip install --upgrade pip
+
+# target icons-browser
+# https://github.com/flet-dev/flet/blob/main/sdk/python/examples/apps/icons_browser/main.py
+
+# target controls-gallery
+# https://github.com/flet-dev/gallery
