@@ -1,0 +1,32 @@
+restart:
+	docker compose down
+	docker compose up -d
+
+
+devel-symlink:
+	ln -s docker-compose-devel.yaml docker-compose.yaml
+
+
+devel-uv-init:
+	docker compose run --rm app uv init --bare
+	docker compose run --rm app uv add 'flet[all]=={{ flet_version }}' --dev
+	docker compose run --rm app uv add 'wdb' --dev
+
+
+devel-setup:
+	make devel-symlink
+	make restart
+
+
+devel-new-setup:
+	make devel-symlink
+	make devel-uv-init
+	make restart
+
+
+tools-up:
+	docker compose -f docker-compose-devel-tools.yaml up -d
+
+
+tools-down:
+	docker compose -f docker-compose-devel-tools.yaml down

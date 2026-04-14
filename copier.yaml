@@ -1,0 +1,39 @@
+# +----------------------+
+# | Copier Configuration |
+# +----------------------+
+_exclude:
+  - copier.yaml
+  - __pycache__
+  - .git
+  - "{% if _copier_operation == 'update' -%}/services/app/src/**{% endif %}"
+
+# +-----------------+
+# | User: Questions |
+# +-----------------+
+project_name:
+  type: str
+  help: Project name
+
+python_version:
+  type: str
+  help: Python version
+  choices:
+    - ["Python 3.11.5 (Cloudflare compatible)", "3.11.5"]
+
+flet_version:
+  type: str
+  help: Flet version
+  choices:
+    - ["0.84.0", "0.84.0"]
+
+docker_image_base:
+  type: str
+  help: Docker base image
+  choices:
+    - ["Python", "python"]
+
+docker_image_flavour:
+  type: str
+  help: Docker image flavour
+  choices:
+    - ["Debian Bookworm Slim", "slim-bookworm"]
