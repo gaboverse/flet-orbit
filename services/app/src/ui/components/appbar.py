@@ -23,7 +23,7 @@ class AppBarTitle(ft.Text):
                 ),
             ),
             ft.TextSpan(
-                text = 'flow',
+                text = '-orbit',
                 style = ft.TextStyle(
                     weight = 'NORMAL',
                 ),
