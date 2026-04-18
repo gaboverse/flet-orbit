@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: ./services/app
+      dockerfile: ./Dockerfile
+    environment:
+      FLET_FORCE_WEB_SERVER: true
+      WDB_SOCKET_SERVER: wdb
+    ports:
+      - "18000:8000"
+    volumes:
+      - ./services/app:/app
+    command: uv run flet run --web --port 8000 --host 0.0.0.0 -d -r src/main.py
+  wdb:
+    image: kozea/wdb
+    ports:
+      - "11984:1984"
