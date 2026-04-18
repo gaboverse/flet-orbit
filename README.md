@@ -14,24 +14,12 @@
 
 <p align="center">
     <a href="https://github.com/gaboverse/flet-orbit/" target="_blank">
-        <img src="https://img.shields.io/badge/github-gaboverse%2Fflet--orbit-0ea5e6?logo=github"
-             alt="flet-orbit github repo" />
-    </a>
+        <img src="https://img.shields.io/badge/github-gaboverse%2Fflet--orbit-0ea5e6?logo=github" alt="flet-orbit github repo" /></a>
     <a href="https://flet-orbit.gabover.se/" target="_blank">
-        <img src="https://img.shields.io/badge/docs-flet--orbit.gabover.se-0ea5e6?logo=materialformkdocs&logoColor=white" 
-             alt="flet-orbit docs" />
-    </a>
+        <img src="https://img.shields.io/badge/docs-flet--orbit.gabover.se-0ea5e6?logo=materialformkdocs&logoColor=white" alt="flet-orbit docs" /></a>
 </p>
 
 ---
-
-
-
----
-
-An opinionated workflow for Flet apps
-
-Official Docs: [flet-orbit.gabover.se](https://flet-orbit.gabover.se/)
 
 ## Technologies
 
