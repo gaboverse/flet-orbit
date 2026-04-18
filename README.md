@@ -1,5 +1,12 @@
-![flet-orbit](https://flet-orbit.gabover.se/assets/img/flet-orbit-logo-dark.png#gh-dark-mode-only)
-![flet-orbit](https://flet-orbit.gabover.se/assets/img/flet-orbit-logo-light.png#gh-light-mode-only)
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)"
+                srcset="https://flet-orbit.gabover.se/assets/img/flet-orbit-logo-dark.png">
+        <source media="(prefers-color-scheme: light)" 
+                srcset="https://flet-orbit.gabover.se/assets/img/flet-orbit-logo-light.png">
+        <img alt="flet-orbit">
+    </picture>
+</p>
 
 > An opinionated workflow for Flet apps
 
