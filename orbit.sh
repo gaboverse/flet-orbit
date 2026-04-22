@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Orbit CLI
+# orbit.sh
 
-# ./orbit restart
-# ./orbit setup devel
-# ./orbit setup devel  --new
-# ./orbit setup devel  --only-symlink
-# ./orbit setup devel  --only-uv-init
-# ./orbit tools up
-# ./orbit tools down
+# ./orbit.sh restart
+# ./orbit.sh setup devel
+# ./orbit.sh setup devel  --new
+# ./orbit.sh setup devel  --only-symlink
+# ./orbit.sh setup devel  --only-uv-init
+# ./orbit.sh tools up
+# ./orbit.sh tools down
 
 FLET_VER="{{ flet_version }}"
 
