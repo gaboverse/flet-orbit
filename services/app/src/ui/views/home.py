@@ -1,12 +1,10 @@
 import flet as ft
 
-from utils.decorators import view
+import orbit
 
-@view("/")
+
+@orbit.view("/")
 class HomeView(ft.Column):
     def __init__(self):
         super().__init__()
-
-        # Content
-        text = ft.Text(value="Welcome Home!")
-        self.controls.append(text)
+        self.controls.append(ft.Text("Welcome Home!"))
