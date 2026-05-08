@@ -2,48 +2,31 @@ import flet as ft
 
 from ui.components.appbar import AppBarComponent
 from ui.components.navbar import NavBarComponent
+import orbit
 
-import ui.views
-
-from utils.loaders import get_view
-from utils.helpers import navigate
 
 def main(page: ft.Page):
-
-    # +------------+
-    # | App Layout |
-    # +------------+
-
+    # App layout
     page.title = "Example"
     page.appbar = AppBarComponent()
     page.navigation_bar = NavBarComponent()
 
+    # View discovery
+    orbit.load_views("ui.views")
 
-    # +--------------+
-    # | Initial view |
-    # +--------------+
+    # Router
+    router = orbit.Router(page)
 
-    ViewClass = get_view('/')
-    view_instance = ViewClass()  # Instantiate the view
-    page.controls.append(view_instance)
-    page.update()
-
-    # +-----------------+
-    # | Events Handlers |
-    # +-----------------+
-
-    # Navigation: NavBar
+    # Event handlers
     def navbar_navigate(e):
         route = page.navigation_bar.get_event_route(e)
-        navigate(page, route)
+        router.navigate(route)
 
-
-    # +-----------------+
-    # | Events Triggers |
-    # +-----------------+
-
-    # Navigation: Navbar
+    # Event triggers
     page.navigation_bar.on_change = navbar_navigate
 
+    # Initial route
+    router.navigate(page.route or "/")
 
-ft.app(main, assets_dir="assets")
+
+ft.run(main, assets_dir="assets")

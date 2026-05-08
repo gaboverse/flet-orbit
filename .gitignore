@@ -1,2 +1,5 @@
-# Fletflow files
+# flet-orbit files
 docker-compose.yaml
+
+# Python cache
+**/__pycache__/
